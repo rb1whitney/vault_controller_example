@@ -1,0 +1,15 @@
+{
+    "api_objects": [
+        {
+            "api_method": "post",
+            "api_path": "sys/audit/audit_file",
+            "api_payload": {
+                "description": "Default-Audit-Log",
+                "options": {
+                    "file_path": "/var/log/vault.log"
+                },
+                "type": "file"
+            }
+        }
+    ]
+}

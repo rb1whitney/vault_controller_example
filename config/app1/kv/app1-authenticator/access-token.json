@@ -1,0 +1,14 @@
+{
+    "api_objects": [
+        {
+            "api_method": "post",
+            "api_path": "app1-authenticator/access-token",
+            "api_payload": {
+                "access_key": "vault:v1:zN3gLgJt1PncqyXb8Hckj/tJGL6Qm/JwyR1Iyzccql+M6MdZtt+Y21231KvKnlqnLWs3uSc=",
+                "secret_key": "vault:v1:9/jCWmoHAh/JPcllkJDtksLeeNBpLnDxrLp2PnPeQAebXSqNI7sYRvOjKQ=="
+            },
+            "transit_engine": "transit",
+            "transit_key": "app1-transit-key"
+        }
+    ]
+}

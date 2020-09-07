@@ -1,0 +1,32 @@
+{
+    "api_objects": [
+        {
+            "api_method": "post",
+            "api_path": "auth/ldap/groups/vault-app1-admin",
+            "api_payload": {
+                "policies": [
+                    "app1-admin",
+                    "app1-team-secrets-writer",
+                    "app1-team-secrets-reader",
+                    "app1-authenticator-writer",
+                    "app1-authenticator-reader",
+                    "transit-encrypt-global",
+                    "transit-decrypt-app1"
+                ]
+            }
+        },
+        {
+            "api_method": "post",
+            "api_path": "auth/ldap/groups/vault-app1-user",
+            "api_payload": {
+                "policies": [
+                    "app1-admin",
+                    "vault-app1-writer",
+                    "vault-app1-reader",
+                    "transit-encrypt-global",
+                    "transit-decrypt-app1"
+                ]
+            }
+        }
+    ]
+}

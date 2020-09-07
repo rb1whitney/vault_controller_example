@@ -1,0 +1,17 @@
+{
+    "api_objects": [
+        {
+            "api_method": "post",
+            "api_path": "app1-team-secrets/external-vendor",
+            "api_payload": {
+                "vendor1": "vault:v1:WFdoDh0M1c2TMRhxsZmXtzvT4QmxZZEPEKsIoDUKTpvG14mtpP0=",
+                "vendor2": "vault:v1:6U/N+ZH5u9YoHsJXqe3/0bQgnr7rp6p+M2+xqmZmlGrC1KYEpQU=",
+                "vendor3": "vault:v1:d8TpfLQcAN/gaP/JkMGWGV0f1erobov1ZPW8l20Mq/sjQ/h5s7I=",
+                "vendor4": "vault:v1:GIlH6y3IzRiRs36RO0+4kEnbll3PWb8oRlob9yIHz9ibAbrbmc0=",
+                "vendor5": "vault:v1:5LRZ0htHf08zp98bkW/1R4ZA/FLQKRCQwolvMCmf0JvD5w4ZESE="
+            },
+            "transit_engine": "transit",
+            "transit_key": "app1-transit-key"
+        }
+    ]
+}

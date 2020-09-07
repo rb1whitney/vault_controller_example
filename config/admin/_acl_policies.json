@@ -1,0 +1,299 @@
+{
+    "api_objects": [
+        {
+            "api_method": "post",
+            "api_path": "sys/policy/admin-access",
+            "api_payload": {
+                "path": {
+                    "sys/audit/*": {
+                        "capabilities": [
+                            "create",
+                            "update",
+                            "list",
+                            "sudo"
+                        ]
+                    },
+                    "sys/auth/*": {
+                        "capabilities": [
+                            "create",
+                            "update",
+                            "delete",
+                            "list",
+                            "sudo"
+                        ]
+                    },
+                    "sys/auth": {
+                        "capabilities": [
+                            "read"
+                        ]
+                    },
+                    "sys/policies/acl/*": {
+                        "capabilities": [
+                            "create",
+                            "read",
+                            "update",
+                            "delete",
+                            "list",
+                            "sudo"
+                        ]
+                    },
+                    "sys/policies/acl": {
+                        "capabilities": [
+                            "list"
+                        ]
+                    },
+                    "sys/policy": {
+                        "capabilities": [
+                            "create",
+                            "read",
+                            "update",
+                            "delete",
+                            "list"
+                        ]
+                    },
+                    "sys/mounts/*": {
+                        "capabilities": [
+                            "create",
+                            "read",
+                            "update",
+                            "delete",
+                            "list"
+                        ]
+                    },
+                    "sys/health": {
+                        "capabilities": [
+                            "read",
+                            "sudo"
+                        ]
+                    },
+                    "sys/capabilities": {
+                        "capabilities": [
+                            "create",
+                            "update"
+                        ]
+                    },
+                    "sys/capabilities-self": {
+                        "capabilities": [
+                            "create",
+                            "update"
+                        ]
+                    },
+                    "sys/config/cors/": {
+                        "capabilities": [
+                            "create",
+                            "read",
+                            "update",
+                            "delete",
+                            "list",
+                            "sudo"
+                        ]
+                    },
+                    "sys/generate-root/attempt": {
+                        "capabilities": [
+                            "create",
+                            "read",
+                            "update",
+                            "delete",
+                            "list"
+                        ]
+                    },
+                    "sys/generate-root/update": {
+                        "capabilities": [
+                            "create",
+                            "update"
+                        ]
+                    },
+                    "sys/key-status": {
+                        "capabilities": [
+                            "read"
+                        ]
+                    }
+                }
+            }
+        },
+        {
+            "api_method": "post",
+            "api_path": "sys/policy/auditor-access",
+            "api_payload": {
+                "path": {
+                    "sys/audit-hash/*": {
+                        "capabilities": [
+                            "create"
+                        ]
+                    },
+                    "sys/audit/*": {
+                        "capabilities": [
+                            "delete",
+                            "sudo"
+                        ]
+                    },
+                    "sys/config/auditing/request-headers": {
+                        "capabilities": [
+                            "read",
+                            "sudo"
+                        ]
+                    },
+                    "sys/config/auditing/request-headers/*": {
+                        "capabilities": [
+                            "create",
+                            "read",
+                            "update",
+                            "delete",
+                            "list",
+                            "sudo"
+                        ]
+                    },
+                    "sys/key-status": {
+                        "capabilities": [
+                            "read"
+                        ]
+                    }
+                }
+            }
+        },
+        {
+            "api_method": "post",
+            "api_path": "sys/policy/transit-admin",
+            "api_payload": {
+                "path": {
+                    "transit/keys/*/rotate": {
+                        "capabilities": [
+                            "update"
+                        ]
+                    },
+                    "transit/export/encryption-key/*": {
+                        "capabilities": [
+                            "read"
+                        ]
+                    },
+                    "transit/export/encryption-key/*/*": {
+                        "capabilities": [
+                            "read"
+                        ]
+                    },
+                    "transit": {
+                        "capabilities": [
+                            "read"
+                        ]
+                    },
+                    "transit/backup/*": {
+                        "capabilities": [
+                            "read"
+                        ]
+                    },
+                    "transit/keys/*": {
+                        "capabilities": [
+                            "create",
+                            "update",
+                            "read",
+                            "list"
+                        ]
+                    },
+                    "transit/restore/*": {
+                        "capabilities": [
+                            "create",
+                            "update"
+                        ]
+                    }
+                }
+            }
+        },
+        {
+            "api_method": "post",
+            "api_path": "sys/policy/vault-admin-writer",
+            "api_payload": {
+                "path": {
+                    "vault-admin/*": {
+                        "capabilities": [
+                            "create",
+                            "update",
+                            "delete"
+                        ]
+                    }
+                }
+            }
+        },
+        {
+            "api_method": "post",
+            "api_path": "sys/policy/vault-admin-reader",
+            "api_payload": {
+                "path": {
+                    "vault-admin/*": {
+                        "capabilities": [
+                            "read",
+                            "list"
+                        ]
+                    }
+                }
+            }
+        },
+        {
+            "api_method": "post",
+            "api_path": "sys/policy/vault-auditor-writer",
+            "api_payload": {
+                "path": {
+                    "vault-auditor/*": {
+                        "capabilities": [
+                            "create",
+                            "update",
+                            "delete"
+                        ]
+                    }
+                }
+            }
+        },
+        {
+            "api_method": "post",
+            "api_path": "sys/policy/vault-auditor-reader",
+            "api_payload": {
+                "path": {
+                    "vault-auditor/*": {
+                        "capabilities": [
+                            "read",
+                            "list"
+                        ]
+                    }
+                }
+            }
+        },
+        {
+            "api_method": "post",
+            "api_path": "sys/policy/transit-encrypt-global",
+            "api_payload": {
+                "path": {
+                    "transit/encrypt/*": {
+                        "capabilities": [
+                            "update"
+                        ]
+                    }
+                }
+            }
+        },
+        {
+            "api_method": "post",
+            "api_path": "sys/policy/transit-decrypt-vault-admin",
+            "api_payload": {
+                "path": {
+                    "transit/encrypt/vault-admin": {
+                        "capabilities": [
+                            "update"
+                        ]
+                    }
+                }
+            }
+        },
+        {
+            "api_method": "post",
+            "api_path": "sys/policy/transit-decrypt-vault-auditor",
+            "api_payload": {
+                "path": {
+                    "transit/encrypt/vault-auditor": {
+                        "capabilities": [
+                            "update"
+                        ]
+                    }
+                }
+            }
+        }
+    ]
+}

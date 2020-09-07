@@ -1,0 +1,17 @@
+{
+    "api_payloads": [
+        {
+            "api_method": "post",
+            "api_path": "sys/policy/transit-decrypt-vault-auditor",
+            "api_payload": {
+                "path": {
+                    "transit/encrypt/vault-auditor": {
+                        "capabilities": [
+                            "update"
+                        ]
+                    }
+                }
+            }
+        }
+    ]
+}

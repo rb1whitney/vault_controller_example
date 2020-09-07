@@ -1,0 +1,142 @@
+dn: ou=people,dc=corp,dc=org
+changetype: add
+objectclass: organizationalUnit
+ou: people
+
+dn: ou=groups,dc=corp,dc=org
+changetype: add
+objectclass: organizationalUnit
+ou: groups
+
+dn: cn=vaultdeveloper1,ou=people,dc=corp,dc=org
+changetype: add
+cn: vaultdeveloper1
+displayname: Developer User #1
+gidnumber: 10001
+homedirectory: /home/vaultdeveloper1
+loginshell: /bin/bash
+mail: developer1@corp.org
+objectclass: inetOrgPerson
+objectclass: posixAccount
+objectclass: top
+sn: 1
+uid: vaultdeveloper1
+uidnumber: 10001
+userpassword: happyDeveloper123
+
+dn: cn=vaultdeveloper2,ou=people,dc=corp,dc=org
+changetype: add
+objectclass: inetOrgPerson
+cn: vaultdeveloper2
+sn: 2
+displayname: Developer User #2
+mail: vaultdeveloper2@corp.org
+userpassword: happyDeveloper123
+gidnumber: 10002
+homedirectory: /home/vaultdeveloper2
+loginshell: /bin/bash
+objectclass: posixAccount
+objectclass: top
+uid: vaultdeveloper3
+uidnumber: 10002
+
+dn: cn=vaultdeveloper3,ou=people,dc=corp,dc=org
+changetype: add
+cn: vaultdeveloper3
+displayname: Developer User #3
+gidnumber: 10003
+homedirectory: /home/vaultdeveloper3
+loginshell: /bin/bash
+mail: vaultdeveloper3@corp.org
+objectclass: inetOrgPerson
+objectclass: posixAccount
+objectclass: top
+sn: 3
+uid: vaultdeveloper3
+uidnumber: 10003
+userpassword: unhappyDeveloper123
+
+dn: cn=vaultsecurityengineer,ou=people,dc=corp,dc=org
+changetype: add
+cn: vaultsecurityengineer
+displayname: Security Engineer
+gidnumber: 10004
+homedirectory: /home/vaultsecurity
+loginshell: /bin/bash
+mail: vaultsecurityengineer@corp.org
+objectclass: inetOrgPerson
+objectclass: posixAccount
+objectclass: top
+sn: 4
+uid: vaultsecurityengineer
+uidnumber: 10004
+userpassword: verySecure123
+
+dn: cn=vaultoperator1,ou=people,dc=corp,dc=org
+changetype: add
+objectclass: inetOrgPerson
+cn: vaultoperator1
+sn: 5
+displayname: Vault Operator #1
+mail: vaultoperator1@corp.org
+userpassword: vaultadmin123
+gidnumber: 10005
+homedirectory: /home/vaultoperator1
+loginshell: /bin/bash
+objectclass: posixAccount
+objectclass: top
+uid: vaultoperator1
+uidnumber: 10005
+
+dn: cn=vault-admins,ou=groups,dc=corp,dc=org
+changetype: add
+cn: vault-admins
+gidnumber: 10006
+objectclass: posixGroup
+objectclass: top
+
+dn: cn=vault-security,ou=groups,dc=corp,dc=org
+changetype: add
+cn: vault-security
+gidnumber: 10007
+objectclass: posixGroup
+objectclass: top
+
+dn: cn=core-developers,ou=groups,dc=corp,dc=org
+changetype: add
+cn: core-developers
+gidnumber: 10008
+objectclass: posixGroup
+objectclass: top
+
+dn: cn=other-developers,ou=groups,dc=corp,dc=org
+changetype: add
+cn: other-developers
+gidnumber: 10009
+objectclass: posixGroup
+objectclass: top
+
+dn: cn=vault-admins,ou=groups,dc=corp,dc=org
+changetype: modify
+add: memberuid
+memberuid: vaultoperator1
+
+dn: cn=vault-security,ou=groups,dc=corp,dc=org
+changetype: modify
+add: memberuid
+memberuid: vaultsecurityengineer
+
+dn: cn=core-developers,ou=groups,dc=corp,dc=org
+changetype: modify
+add: memberuid
+memberuid: vaultdeveloper1
+
+dn: cn=core-developers,ou=groups,dc=corp,dc=org
+changetype: modify
+add: memberuid
+memberuid: vaultdeveloper2
+
+dn: cn=other-developers,ou=groups,dc=corp,dc=org
+changetype: modify
+add: memberuid
+memberuid: vaultdeveloper3

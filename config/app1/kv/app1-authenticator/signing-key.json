@@ -1,0 +1,13 @@
+{
+    "api_objects": [
+        {
+            "api_method": "post",
+            "api_path": "app1-authenticator/signing_key",
+            "api_payload": {
+                "signing_key": "vault:v1:HbOvk5aGn5SSo3sWbwvuifJ18LfPGlOIX/L1D9UMioxECjZi7iI="
+            },
+            "transit_engine": "transit",
+            "transit_key": "app1-transit-key"
+        }
+    ]
+}

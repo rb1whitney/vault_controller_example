@@ -1,0 +1,31 @@
+{
+    "api_objects": [
+        {
+            "api_method": "post",
+            "api_path": "auth/ldap/groups/vault-admin",
+            "api_payload": {
+                "policies": [
+                    "admin-access",
+                    "transit-admin",
+                    "vault-admin-writer",
+                    "vault-admin-reader",
+                    "transit-encrypt-global",
+                    "transit-decrypt-vault-admin"
+                ]
+            }
+        },
+        {
+            "api_method": "post",
+            "api_path": "auth/ldap/groups/vault-auditor",
+            "api_payload": {
+                "policies": [
+                    "auditor-access",
+                    "vault-auditor-writer",
+                    "vault-auditor-reader",
+                    "transit-encrypt-global",
+                    "transit-decrypt-vault-auditor"
+                ]
+            }
+        }
+    ]
+}
